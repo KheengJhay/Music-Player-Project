@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<title>Music Player App</title>
+	</head>
+	<body>
+		<div class="music__container">
+			<audio src="" id="audio"></audio>
+			<div class="img__container">
+				<div class="loader"></div>
+				<img src="" alt="music-cover" id="cover" onload="test()" />
+				<img src="loader-img.png" alt="music-cover" id="loader-cover" onload="test()" />
+			</div>
+			<div class="music__info">
+				<h4 id="title"></h4>
+				<div class="album__name"></div>
+				<div class="duration">
+					<div class="play__time">00:00</div>
+					<div class="duration__time">00:00</div>
+				</div>
+				<div class="progress__container">
+					<div class="progress"></div>
+				</div>
+			</div>
+			<div class="navigation">
+				<div class="top">
+					<button id="prev" class="action_btn">
+						<i class="fa fa-backward"></i>
+					</button>
+					<button id="play" class="action_btn action_btn_big">
+						<i class="fa fa-play"></i>
+					</button>
+					<button id="next" class="action_btn">
+						<i class="fa fa-forward"></i>
+					</button>
+					<button id="list" class="action_btn">
+						<i class="fa fa-list"></i>
+					</button>
+				</div>
+				<div class="bottom">
+					<button id="undo" class="action_btn">
+						<i class="fa fa-undo"></i>
+					</button>
+					<button id="repeat" class="action_btn">
+						<i class="fa fa-repeat"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="select__music hidden">
+			<button class="close__btn">&times;</button>
+			<div class="row first">
+				<img src="asake-terminator-cover.png" />
+				<h4 data-row="0">Asake - Terminator<i class="fa" id="icon"></i></h4>
+			</div>
+			<div class="row">
+				<img src="kizz-cough-cover.png" alt="" />
+				<h4 data-row="1">Kizz Daniel - Cough<i class="fa" id="icon"></i></h4>
+			</div>
+			<div class="row">
+				<img src="mavins-won-da-mo-cover.png" alt="" />
+				<h4 data-row="2">Mavins - Won Da Mo<i class="fa" id="icon"></i></h4>
+			</div>
+			<div class="row">
+				<img src="rema-calm-down-cover.png" alt="" />
+				<h4 data-row="3">Rema - Calm Down<i class="fa" id="icon"></i></h4>
+			</div>
+			<div class="row">
+				<img src="zino-cod-cover.png" alt="" />
+				<h4 data-row="4">Zinoleesky - Call of Duty<i class="fa" id="icon"></i></h4>
+			</div>
+		</div>
+		<!-- <button class="test">
+			Forward with 10sec
+		</button> -->
+
+		<div class="overlay hidden"></div>
+
+		<script src="app.js"></script>
+	</body>
+</html>
